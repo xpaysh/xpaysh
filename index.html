@@ -1,86 +1,587 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Trigger deployment -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>xPay - Enabling the Agentic Economy</title>
-    <meta name="description" content="Building the future of AI agent payments with HTTP 402 protocol">
+    <meta name="description" content="Building the future of AI agent payments with HTTP 402 protocol. Pioneer of x402 ecosystem with 500K+ transactions/week.">
+    <meta name="keywords" content="x402, HTTP 402, AI agents, payments, blockchain, xPay, agentic economy">
     
-    <!-- Instant redirect to awesome x402 page -->
-    <meta http-equiv="refresh" content="0; url=https://xpaysh.github.io/awesome-x402-page/">
-    <link rel="canonical" href="https://xpaysh.github.io/awesome-x402-page/">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="xPay - Enabling the Agentic Economy">
+    <meta property="og:description" content="Building the future of AI agent payments with HTTP 402 protocol">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://xpaysh.github.io/">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="xPay - Enabling the Agentic Economy">
+    <meta name="twitter:description" content="Building the future of AI agent payments with HTTP 402 protocol">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    
+    <!-- Preconnects for performance -->
+    <link rel="preconnect" href="https://readme-typing-svg.herokuapp.com">
+    <link rel="preconnect" href="https://img.shields.io">
     
     <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
+        :root {
+            --primary: #2563eb;
+            --secondary: #10b981;
+            --accent: #f59e0b;
+            --text-primary: #111827;
+            --text-secondary: #6b7280;
+            --text-muted: #9ca3af;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f9fafb;
+            --bg-tertiary: #f3f4f6;
+            --border: #e5e7eb;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            --space-xs: 0.5rem;
+            --space-sm: 1rem;
+            --space-md: 1.5rem;
+            --space-lg: 2rem;
+            --space-xl: 3rem;
+            --space-2xl: 4rem;
+            --radius-md: 0.5rem;
+            --radius-lg: 0.75rem;
+            --radius-xl: 1rem;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-primary: #f9fafb;
+                --text-secondary: #d1d5db;
+                --text-muted: #9ca3af;
+                --bg-primary: #111827;
+                --bg-secondary: #1f2937;
+                --bg-tertiary: #374151;
+                --border: #374151;
+                --shadow: rgba(0, 0, 0, 0.3);
+            }
+        }
+
+        * {
             margin: 0;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        /* Header */
+        .header {
+            background: var(--gradient-primary);
             color: white;
+            padding: var(--space-2xl) 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.05"><circle cx="30" cy="30" r="2"/></g></svg>');
+            opacity: 0.5;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .typing-animation {
+            margin-bottom: var(--space-lg);
+        }
+
+        .header h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            margin-bottom: var(--space-md);
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: var(--space-xl);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-md);
+            margin-bottom: var(--space-xl);
+        }
+
+        .stat {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: var(--space-md);
+            border-radius: var(--radius-lg);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             text-align: center;
         }
-        .container {
-            max-width: 600px;
-            padding: 2rem;
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: var(--space-xs);
         }
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+
+        .stat-label {
+            font-size: 0.875rem;
+            opacity: 0.8;
         }
-        p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
+
+        /* Badges */
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-sm);
+            flex-wrap: wrap;
         }
-        .btn {
+
+        .badge {
             display: inline-block;
-            padding: 1rem 2rem;
             background: rgba(255, 255, 255, 0.2);
-            color: white;
-            text-decoration: none;
-            border-radius: 0.5rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
             backdrop-filter: blur(10px);
+            padding: var(--space-xs) var(--space-md);
+            border-radius: 9999px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 0.875rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: var(--transition);
         }
-        .btn:hover {
+
+        .badge:hover {
             background: rgba(255, 255, 255, 0.3);
             transform: translateY(-2px);
         }
-        .spinner {
-            width: 40px;
-            height: 40px;
-            border: 4px solid rgba(255, 255, 255, 0.3);
-            border-top: 4px solid white;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            margin: 0 auto 1rem;
+
+        /* Main Content */
+        .main {
+            padding: var(--space-2xl) 0;
         }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+
+        .section {
+            margin-bottom: var(--space-2xl);
         }
+
+        .section h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: var(--space-lg);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+        }
+
+        /* Cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-lg);
+        }
+
+        .card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-xl);
+            padding: var(--space-lg);
+            box-shadow: 0 4px 12px var(--shadow);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px var(--shadow);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+
+        .card h3 a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .card h3 a:hover {
+            text-decoration: underline;
+        }
+
+        .card-description {
+            color: var(--text-secondary);
+            margin-bottom: var(--space-md);
+            font-style: italic;
+        }
+
+        .card ul {
+            list-style: none;
+            color: var(--text-secondary);
+        }
+
+        .card li {
+            margin-bottom: var(--space-xs);
+            padding-left: var(--space-md);
+            position: relative;
+        }
+
+        .card li::before {
+            content: '✨';
+            position: absolute;
+            left: 0;
+        }
+
+        /* Tech Stack */
+        .tech-stack {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-sm);
+            flex-wrap: wrap;
+            margin-top: var(--space-lg);
+        }
+
+        .tech-badge {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            padding: var(--space-xs) var(--space-md);
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: 1px solid var(--border);
+        }
+
+        /* Code Block */
+        .code-block {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-lg);
+            margin: var(--space-lg) 0;
+            overflow-x: auto;
+        }
+
+        .code-block pre {
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', monospace;
+            font-size: 0.875rem;
+            line-height: 1.6;
+            color: var(--text-primary);
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            padding: var(--space-xl) 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+            color: var(--text-primary);
+        }
+
+        .footer p {
+            color: var(--text-secondary);
+            margin-bottom: var(--space-md);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-lg);
+            flex-wrap: wrap;
+            margin-bottom: var(--space-lg);
+        }
+
+        .footer-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .footer-link:hover {
+            color: var(--text-primary);
+        }
+
+        .footer-note {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            padding-top: var(--space-md);
+            margin-top: var(--space-md);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 var(--space-sm);
+            }
+            
+            .header {
+                padding: var(--space-xl) 0;
+            }
+            
+            .badges {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: var(--space-sm);
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .card:nth-child(1) { animation-delay: 0.1s; }
+        .card:nth-child(2) { animation-delay: 0.2s; }
+        .card:nth-child(3) { animation-delay: 0.3s; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="spinner"></div>
-        <h1>🚀 xPay</h1>
-        <p>Redirecting to our awesome x402 resources...</p>
-        <a href="https://xpaysh.github.io/awesome-x402-page/" class="btn">
-            Continue to Awesome x402 →
-        </a>
-    </div>
-    
-    <script>
-        // Fallback redirect after 2 seconds
-        setTimeout(() => {
-            window.location.href = 'https://xpaysh.github.io/awesome-x402-page/';
-        }, 2000);
-    </script>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="typing-animation">
+                    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=24&duration=3000&pause=1000&color=FFFFFF&width=600&lines=Building+the+Future+of+Payments;Helping+AI+Agents+Get+Paid;x402+Protocol+Pioneer;10%2C000%25%2B+Growth+in+2024" alt="Typing animation">
+                </div>
+                
+                <h1>🚀 xPay</h1>
+                <p class="subtitle">
+                    Enabling the Agentic Economy - Building the infrastructure for AI agents to transact autonomously using the HTTP 402 "Payment Required" status code.
+                </p>
+                
+                <div class="stats">
+                    <div class="stat">
+                        <div class="stat-number">500K+</div>
+                        <div class="stat-label">Weekly Transactions</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">$180M+</div>
+                        <div class="stat-label">Ecosystem Value</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">2s</div>
+                        <div class="stat-label">Settlement Time</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">10,000%</div>
+                        <div class="stat-label">Growth Rate</div>
+                    </div>
+                </div>
+                
+                <div class="badges">
+                    <a href="https://x402.org" class="badge" target="_blank">🌐 Website</a>
+                    <a href="https://github.com/xpaysh/awesome-x402" class="badge" target="_blank">📚 Awesome x402</a>
+                    <a href="https://xpaysh.github.io/awesome-x402-page/" class="badge" target="_blank">🚀 Landing Page</a>
+                    <a href="https://github.com/xpaysh/x402-local" class="badge" target="_blank">🏠 Local Dev</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Mission -->
+            <section class="section">
+                <h2>🎯 Mission: Democratizing Internet Payments</h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3>🤖 AI Agent Payments</h3>
+                        <p class="card-description">Enable Claude, GPT, and other agents to make autonomous payments</p>
+                        <ul>
+                            <li>MCP Integration for Claude</li>
+                            <li>OpenAI Function Calling</li>
+                            <li>LangChain Tool Integration</li>
+                            <li>AutoGPT Plugin Ready</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>⚡ HTTP 402 Protocol</h3>
+                        <p class="card-description">First practical implementation of the long-dormant HTTP status code</p>
+                        <ul>
+                            <li>One-line API integration</li>
+                            <li>Zero transaction fees</li>
+                            <li>2-second settlement</li>
+                            <li>Multi-chain support</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>🌐 Ecosystem Growth</h3>
+                        <p class="card-description">Building a thriving community of developers and projects</p>
+                        <ul>
+                            <li>Coinbase & Cloudflare partnerships</li>
+                            <li>Multiple language SDKs</li>
+                            <li>Active developer community</li>
+                            <li>Production-ready tools</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Active Projects -->
+            <section class="section">
+                <h2>🛠️ Active Projects</h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3><a href="https://github.com/xpaysh/awesome-x402" target="_blank">🌟 Awesome x402 Resources</a></h3>
+                        <p class="card-description">The ultimate curated list of x402 protocol resources, tools, and projects</p>
+                        <ul>
+                            <li>50+ Resources across 8 categories</li>
+                            <li>Official SDKs for TypeScript, Python, Rust</li>
+                            <li>AI Agent Examples with Claude, AutoGPT</li>
+                            <li>Complete Tutorials from beginner to advanced</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3><a href="https://github.com/xpaysh/x402-local" target="_blank">🏠 x402 Local Development</a></h3>
+                        <p class="card-description">Local development environment and tools for x402 protocol</p>
+                        <ul>
+                            <li>Local Testing Environment for x402 development</li>
+                            <li>Docker Compose setup for quick start</li>
+                            <li>Development Tools and utilities</li>
+                            <li>Examples & Templates for rapid prototyping</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="card">
+                        <h3><a href="https://xpaysh.github.io/awesome-x402-page/" target="_blank">🎨 Beautiful Landing Page</a></h3>
+                        <p class="card-description">Professional showcase of the x402 ecosystem</p>
+                        <ul>
+                            <li>Lightning Fast - 95+ Lighthouse score</li>
+                            <li>Responsive Design - Perfect on all devices</li>
+                            <li>Analytics Ready - GTM integration</li>
+                            <li>Conversion Optimized - Drive GitHub stars</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tech Stack -->
+            <section class="section">
+                <h2>🛠️ Tech Stack</h2>
+                <div class="tech-stack">
+                    <span class="tech-badge">TypeScript</span>
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Rust</span>
+                    <span class="tech-badge">Node.js</span>
+                    <span class="tech-badge">Ethereum</span>
+                    <span class="tech-badge">Solana</span>
+                    <span class="tech-badge">Web3</span>
+                    <span class="tech-badge">Docker</span>
+                    <span class="tech-badge">GitHub Actions</span>
+                </div>
+            </section>
+
+            <!-- Code Example -->
+            <section class="section">
+                <h2>🤖 AI Agent Integration</h2>
+                <div class="code-block">
+                    <pre><code>// Enable AI agents to make payments in one line
+import { x402 } from 'x402-next';
+
+app.use('/api/premium', 
+  x402({ price: '0.001' }),
+  (req, res) => {
+    res.json({ data: 'premium content' });
+  }
+);
+
+// Claude, GPT, and other agents can now pay automatically! 🤖</code></pre>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3>💬 Let's Connect!</h3>
+                <p>Building the future of autonomous payments? Let's collaborate!</p>
+                
+                <div class="footer-links">
+                    <a href="mailto:xpaysh@gmail.com" class="footer-link">📧 Email</a>
+                    <a href="https://twitter.com/x402org" class="footer-link" target="_blank">🐦 Twitter</a>
+                    <a href="https://discord.gg/x402" class="footer-link" target="_blank">💬 Discord</a>
+                    <a href="https://x402.org" class="footer-link" target="_blank">🌐 Website</a>
+                </div>
+                
+                <div class="footer-note">
+                    <p><strong>"The best way to predict the future is to build it."</strong> 🚀</p>
+                    <p>⭐ If you believe in the agentic economy, star our repos and join the movement!</p>
+                    <p>🔥 Last Updated: November 2024</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

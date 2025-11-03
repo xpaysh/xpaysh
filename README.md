@@ -48,17 +48,7 @@ We're building the infrastructure for **AI agents to transact autonomously** usi
 
 ---
 
-## 🚀 Featured Projects
-
-### 🌟 [Awesome x402 Resources](https://github.com/xpaysh/awesome-x402)
-> The ultimate curated list of x402 protocol resources, tools, and projects
-
-- 📚 **50+ Resources** across 8 categories
-- 🔧 **Official SDKs** for TypeScript, Python, Rust
-- 🤖 **AI Agent Examples** with Claude, AutoGPT
-- 📖 **Complete Tutorials** from beginner to advanced
-
-### 🎨 [Beautiful Landing Page](https://xpaysh.github.io/awesome-x402-page/)
+## 🎨 [Beautiful Landing Page](https://xpaysh.github.io/awesome-x402-page/)
 > Professional showcase of the x402 ecosystem
 
 - ⚡ **Lightning Fast** - 95+ Lighthouse score
@@ -121,20 +111,23 @@ app.use('/api/premium',
 
 ---
 
-## 📈 GitHub Stats
+## 🛠️ Active Projects
 
-<div align="center">
+### 🌟 [Awesome x402 Resources](https://github.com/xpaysh/awesome-x402)
+> The ultimate curated list of x402 protocol resources, tools, and projects
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=xpaysh&show_icons=true&theme=react&include_all_commits=true&count_private=true"/>
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=xpaysh&layout=compact&langs_count=8&theme=react"/>
+- 📚 **50+ Resources** across 8 categories
+- 🔧 **Official SDKs** for TypeScript, Python, Rust
+- 🤖 **AI Agent Examples** with Claude, AutoGPT
+- 📖 **Complete Tutorials** from beginner to advanced
 
-</div>
+### 🏠 [x402 Local Development](https://github.com/xpaysh/x402-local)
+> Local development environment and tools for x402 protocol
 
-<div align="center">
-
-[![GitHub Streak](https://streak-stats.demolab.com?user=xpaysh&theme=react&hide_border=false)](https://git.io/streak-stats)
-
-</div>
+- 🔧 **Local Testing Environment** for x402 development
+- 🐳 **Docker Compose** setup for quick start
+- 🛠️ **Development Tools** and utilities
+- 📝 **Examples & Templates** for rapid prototyping
 
 ---
 
