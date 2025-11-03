@@ -48,7 +48,7 @@ We're building the infrastructure for **AI agents to transact autonomously** usi
 
 ---
 
-## 🎨 [Beautiful Landing Page](https://xpaysh.github.io/awesome-x402-page/)
+## 🎨 [Beautiful Landing Page](https://xpaysh.github.io/awesome-x402/)
 > Professional showcase of the x402 ecosystem
 
 - ⚡ **Lightning Fast** - 95+ Lighthouse score
@@ -190,7 +190,7 @@ echo '{"x402": "x402-mcp-server"}' >> claude_desktop_config.json
 
 **Building the future of autonomous payments?** Let's collaborate!
 
-📧 **Email**: [xpaysh@gmail.com](mailto:xpaysh@gmail.com)  
+📧 **Email**: [hello@xpay.sh](mailto:hello@xpay.sh)  
 🐦 **Twitter**: [@x402org](https://twitter.com/x402org)  
 💼 **LinkedIn**: [Connect with xPay](https://linkedin.com/company/xpay)  
 🌐 **Website**: [x402.org](https://x402.org)
