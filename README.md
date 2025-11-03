@@ -12,7 +12,7 @@
 
 [![Website](https://img.shields.io/badge/🌐_Website-x402.org-blue?style=for-the-badge)](https://x402.org)
 [![Awesome List](https://img.shields.io/badge/📚_Awesome_x402-Resources-brightgreen?style=for-the-badge)](https://github.com/xpaysh/awesome-x402)
-[![Landing Page](https://img.shields.io/badge/🚀_Landing_Page-Live-purple?style=for-the-badge)](https://xpaysh.github.io/awesome-x402-page/)
+[![Landing Page](https://img.shields.io/badge/🚀_Landing_Page-Live-purple?style=for-the-badge)](https://xpaysh.github.io/awesome-x402/)
 
 </div>
 
