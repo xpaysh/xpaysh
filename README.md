@@ -1,4 +1,4 @@
-# 🚀 xPay - Enabling the Agentic Economy
+# 🚀 {xpay✦} - Enabling the Agentic Economy
 
 <div align="center">
 
