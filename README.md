@@ -37,9 +37,10 @@ Open-source, vendor-neutral infrastructure for the layer where **AI agents trans
 |---|---|---|
 | [`agentic-commerce-for-woocommerce`](https://github.com/xpaysh/agentic-commerce-for-woocommerce) | **Live** (v0.1.7+, GPLv2) | WordPress plugin. ACP + UCP + AP2 on a WC store. |
 | [`agentic-commerce-for-commercetools`](https://github.com/xpaysh/agentic-commerce-for-commercetools) | **Scaffolded** | Headless / Connect Service for commercetools projects. |
+| [`agentic-commerce-for-bigcommerce`](https://github.com/xpaysh/agentic-commerce-for-bigcommerce) | **Scaffolded** | BigCommerce App for stores in the App Marketplace. |
 | [`agentic-commerce-plugin-template`](https://github.com/xpaysh/agentic-commerce-plugin-template) | Scaffold | Shared TypeScript template the family builds on. CI linter blocks fictitious well-known URIs. |
 | [`awesome-agentic-commerce`](https://github.com/xpaysh/awesome-agentic-commerce) | Curated index | Ecosystem registry — xpay-built + vendor-built + community. |
-| `agentic-commerce-for-bigcommerce` · `…-magento` · `…-shopify-app` · `…-salesforce-commerce` | Planned | First-party plugins, staggered cadence. |
+| `agentic-commerce-for-magento` · `…-shopify-app` · `…-salesforce-commerce` | Planned | First-party plugins, staggered cadence. |
 | `…-prestashop` · `…-saleor` · `…-opencart` · `…-shopware` · `…-spree` · `…-sylius` · `…-nopcommerce` · `…-drupal-commerce` · `…-ecwid` | Community | Template-based, community-contributed. |
 
 ### x402 ecosystem
