@@ -36,11 +36,11 @@ Open-source, vendor-neutral infrastructure for the layer where **AI agents trans
 | Repo | Status | What it does |
 |---|---|---|
 | [`agentic-commerce-for-woocommerce`](https://github.com/xpaysh/agentic-commerce-for-woocommerce) | **Live** (v0.1.7+, GPLv2) | WordPress plugin. ACP + UCP + AP2 on a WC store. |
-| [`agentic-commerce-for-commercetools`](https://github.com/xpaysh/agentic-commerce-for-commercetools) | **Phase B-1, scaffold** | Headless / Connect Service for commercetools projects. |
+| [`agentic-commerce-for-commercetools`](https://github.com/xpaysh/agentic-commerce-for-commercetools) | **Scaffolded** | Headless / Connect Service for commercetools projects. |
 | [`agentic-commerce-plugin-template`](https://github.com/xpaysh/agentic-commerce-plugin-template) | Scaffold | Shared TypeScript template the family builds on. CI linter blocks fictitious well-known URIs. |
 | [`awesome-agentic-commerce`](https://github.com/xpaysh/awesome-agentic-commerce) | Curated index | Ecosystem registry — xpay-built + vendor-built + community. |
-| `agentic-commerce-for-bigcommerce` · `…-magento` · `…-shopify-app` · `…-salesforce-commerce` | Phase B-2 → B-5 | First-party plugins, staggered 3-4 week cadence. |
-| `…-prestashop` · `…-saleor` · `…-opencart` · `…-shopware` · `…-spree` · `…-sylius` · `…-nopcommerce` · `…-drupal-commerce` · `…-ecwid` | Phase C | Template + community PR. |
+| `agentic-commerce-for-bigcommerce` · `…-magento` · `…-shopify-app` · `…-salesforce-commerce` | Planned | First-party plugins, staggered cadence. |
+| `…-prestashop` · `…-saleor` · `…-opencart` · `…-shopware` · `…-spree` · `…-sylius` · `…-nopcommerce` · `…-drupal-commerce` · `…-ecwid` | Community | Template-based, community-contributed. |
 
 ### x402 ecosystem
 
